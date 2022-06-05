@@ -1,0 +1,142 @@
+{
+	"effects": {
+		"test": {
+			"clazz": "com.abstractphil.template.effects.AbsBaseEffect",
+			"key-name": "test",
+			"display-name": "Test Effect",
+			"gui-name": "Test Effect",
+			"item-lore": [
+				"##template lore test effect"
+			],
+			"gui-lore": [
+				"##GUI lore test effect"
+			],
+			"material": "DIAMOND_PICKAXE",
+			"skull-host": "",
+			"base-exp-to-level": 5,
+			"exp-pct-inc-per-lvl": 1.2,
+			"minimum-level": 1,
+			"max-level": 1,
+			"level-map": {
+				"0": { "exp-to-level": 5,  "multiplier-gain": 0, "unlocked-effects": {} },
+				"5": { "exp-to-level": 15, "multiplier-gain": 0, "unlocked-effects": { "second-battery": 0 } }
+			}
+		}
+	},
+	"item-containers": {
+		"block-breaker": {
+			"clazz": "com.abstractphil.template.effects.BlockBreakerEffect",
+			"key-name": "block-breaker",
+			"display-name": "Block Breaker",
+			"gui-name": "Block Breaker",
+			"item-lore": [
+				"The more blocks you break, the more efficiency you have."
+			],
+			"gui-lore": [
+				""
+			],
+			"material": "DIAMOND_PICKAXE",
+			"max-total-level": 5000,
+			"exp-per-level": [10],
+			"maximum-effects": 5,
+			"starting-effects": ["test"],
+			"base-exp-to-level": 5,
+			"exp-pct-inc-per-lvl": 1.2,
+			"minimum-level": 1,
+			"max-level": 1,
+			"level-map": {
+				"0": { "exp-to-level": 5, "unlocked-effects": {}, "multiplier-gain": 0 }
+			}
+		}
+	},
+	"nbt-key-chains": {
+		"key": "key",
+		"effect-level": "%key-name%:level",
+		"effect-exp": "%key-name%:exp",
+		"effect-efficiency": "%key-name%:efficiency",
+		"item-exp": "stat:exp",
+		"item-level": "stat:level",
+		"item-amount": "stat:amount",
+		"item-efficiency": "stat:efficiency"
+	},
+	"json-key-chains": {
+		"effect-level": "%key-name%:level"
+	},
+	"placeholders": {
+		"item-name": {
+			"limiters": ["rItem", "item-lore", "player"],
+			"nbt": "",
+			"json": "",
+			"triggers": [
+				"%iname%"
+			],
+			"color-codes": ""
+		},
+		"item-amount": {
+			"limiters": ["rItem", "item-lore"],
+			"nbt": "item-amount",
+			"json": "",
+			"triggers": [
+				"%amount%",
+				"%amt%",
+				"%a%"
+			],
+			"color-codes": ""
+		},
+		"effect-level": {
+			"limiters": ["rItem"],
+			"nbt": "effect-level",
+			"json": "",
+			"triggers": [
+				"%level:effectName%",
+				"%lvl:effectName%",
+				"%l:effectName%"
+			],
+			"color-codes": ""
+		},
+		"effect-exp": {
+			"limiters": ["rItem", "aItem"],
+			"nbt": "effect-exp",
+			"json": "",
+			"triggers": [
+				"%experience:effectName%",
+				"%exp:effectName%",
+				"%xp:effectName%"
+			],
+			"color-codes": ""
+		},
+		"item-exp": {
+			"limiters": ["rItem", "aItem"],
+			"nbt": "item-exp",
+			"json": "",
+			"triggers": [
+				"%experience%",
+				"%exp%",
+				"%xp%"
+			],
+			"color-codes": ""
+		},
+		"item-level": {
+			"limiters": ["rItem", "aItem"],
+			"nbt": "item-level",
+			"json": "",
+			"triggers": [
+				"%ilevel%",
+				"%ilvl%"
+			],
+			"color-codes": ""
+		},
+		"player": {
+			"limiters": ["rItem", "player"],
+			"nbt": "",
+			"json": "",
+			"triggers": [
+				"%player%",
+				"%p",
+				"{player}",
+				"{}"
+			],
+			"color-codes": ""
+		}
+	}
+}

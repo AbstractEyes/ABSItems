@@ -1,0 +1,28 @@
+{
+	"buffs": {
+		"flamingblade": {
+			"attach-class": "com.redmancometh.itemattachments.attachments.sword.FlamingBlade",
+			"name": "",
+			"lore": [""]
+		},
+		"shadowblade": {
+			"attach-class": "com.redmancometh.itemattachments.attachments.sword.ShadowBlade",
+			"name": "",
+			"lore": [""]
+		},
+		"vampirichilt": {
+			"attach-class": "com.redmancometh.itemattachments.attachments.sword.VampiricHilt",
+			"name": "",
+			"lore": [""]
+		}
+	},
+	"items": {
+		"vampirichilt": {
+			"buff-name": "vampirichilt",
+			"name": "#vampirichilt",
+			"lore": "##vampirichilt ",
+			"material": "DIAMOND",
+			"level": 1
+		}
+	}
+}

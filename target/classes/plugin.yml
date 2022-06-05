@@ -1,0 +1,21 @@
+name: AbsItems
+main: com.abstractphil.template.Main
+version: 0.1
+description: "Abs Items Plugin"
+depend: [RedItems, ConfigCore]
+commands:
+  abslvl:
+    description: Levels the desired effect to a certain level using internal and nbt. Auto uses level cap.
+    usage: abslvl %player% <"set"/"add"> <"hand"/"position_int"> <effect_name> <level_int> <ignore_level_cap(true/nothing)>
+  abslvlup:
+    description: Adds a single level to the abs item effect using internal and nbt. Auto uses level cap.
+    usage: abslevelup %player% <"hand"/"position_int"> <effect_name> <add_level_int> <ignore_level_cap(true/nothing)>
+  abslvla:
+    description: Levels a legacy reditems without needing abs container support. Auto ignores level cap. Internal level + json.
+    usage: abslvla %player% <"hand"/"position_int"> <effect_name> <level_int> <ignore_level_cap(false/nothing)>
+  absadd:
+    description: Adds "effect" at level 1, "exp" to effect in arg_string, "keychain" nbt data keychain tag defined in config.
+    usage: absadd %player% <"effect"/"exp"/"keychain"> <"hand"/"position_int"> <effect_name> <arg_string>
+  absmake:
+    description: Gives an item the absitem default effect container ability, preparing nbt objects by default.
+    usage: absmake %player% <"hand"/"position_int">
